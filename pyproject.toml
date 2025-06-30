@@ -20,7 +20,7 @@ classifiers = [
   'Topic :: Software Development',
 ]
 dependencies = [
-  'mne >= 1.2',
+  'mne',
   'numpy >= 1.21',
   'packaging',
   'pooch',

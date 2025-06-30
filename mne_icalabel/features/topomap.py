@@ -9,10 +9,13 @@ from mne.defaults import _BORDER_DEFAULT, _EXTRAPOLATE_DEFAULT, _INTERPOLATION_D
 from mne.utils import _validate_type, check_version
 from mne.viz.topomap import _check_extrapolate, _make_head_outlines, _setup_interp
 
-if check_version("mne", "1.6"):
-    from mne._fiff.pick import _pick_data_channels, _picks_to_idx
-else:
-    from mne.io.pick import _pick_data_channels, _picks_to_idx
+# if check_version("mne", "1.6"):
+#     from mne._fiff.pick import _pick_data_channels, _picks_to_idx
+# else:
+#     from mne.io.pick import _pick_data_channels, _picks_to_idx
+
+from mne import pick_types as _pick_data_channels
+from mne import pick_channels as _picks_to_idx
 
 from ..utils._checks import _validate_ica
 from ..utils._docs import fill_doc
